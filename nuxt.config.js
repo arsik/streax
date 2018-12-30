@@ -21,7 +21,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#0099ff' },
 
   /*
   ** Global CSS
@@ -66,6 +66,18 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // SVG Loader
+      config.module.rules
+        .filter(r => r.test.toString().includes("svg"))
+        .forEach(r => {
+          r.test = /\.(png|jpe?g|gif)$/
+        })
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: "vue-svg-loader"
+      })
+
     }
   }
+
 }

@@ -1,43 +1,27 @@
-<template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        streax
-      </h1>
-      <h2 class="subtitle">
-        My streax project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+  .container
+    h1 Streax
+    Button hello
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
+import Vue from 'vue'
+import { Button } from 'ant-design-vue'
 
 export default {
   components: {
-    Logo
+    Button
   }
 }
 </script>
 
-<style>
-
+<style lang="stylus">
 .container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
