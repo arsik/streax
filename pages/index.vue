@@ -4,6 +4,7 @@
     .ant-col-8
       h1 Streax
       Button hello
+      Radio
     .ant-col-8
       h1 Streax
       Button hello
@@ -23,11 +24,12 @@
 
 <script>
 import Vue from 'vue'
-import { Button } from 'ant-design-vue'
+import { Button, Radio } from 'ant-design-vue'
 
 export default {
   components: {
-    Button
+    Button,
+    Radio
   }
 }
 </script>
