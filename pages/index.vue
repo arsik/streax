@@ -1,35 +1,22 @@
 <template lang="pug">
-  //- .container
-  .ant-row
-    .ant-col-8
-      h1 Streax
-      Button hello
-      Radio
-    .ant-col-8
-      h1 Streax
-      Button hello
-    .ant-col-8
-      h1 Streax
-      Button hello
-    .ant-col-8
-      h1 Streax
-      Button hello
-    .ant-col-8
-      h1 Streax
-      Button hello
-    .ant-col-8
-      h1 Streax
-      Button hello
+  .wrapper
+    Header
+    .container
+      .ant-row
+        .ant-col-8
+          h1 Streax
+          a-switch(defaultChecked)
 </template>
 
 <script>
 import Vue from 'vue'
-import { Button, Radio } from 'ant-design-vue'
+import Antd from 'ant-design-vue'
+import Header from '~/components/Header'
+Vue.use(Antd)
 
 export default {
   components: {
-    Button,
-    Radio
+    Header
   }
 }
 </script>
