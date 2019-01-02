@@ -2,7 +2,8 @@
   header.header
     .container
       .logo
-        nuxt-link(to='/') Streax
+        nuxt-link(to='/')
+          Logo
       nav.nav
         nuxt-link(to='/') Проекты
         nuxt-link(to='/') Как это работает?
@@ -25,19 +26,22 @@
 <script>
   import Vue from 'vue'
   import Antd from 'ant-design-vue'
+  import Logo from '~/assets/svg/logo.svg'
   Vue.use(Antd)
 
   export default {
-
+    components: {
+      Logo
+    }
   }
 </script>
 
 <style lang="stylus" scoped>
   .header
     width 100%
-    height 6rem
+    height 8rem
     // padding 0 2rem
-    background #f0f0f0
+    background #fff
 
     .container
       display flex
@@ -46,6 +50,9 @@
 
     .logo
       a 
+        display block
+        width 12rem
+        height 2.4rem
         color black
         font-size 2rem
 
